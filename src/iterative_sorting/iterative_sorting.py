@@ -28,7 +28,7 @@ def count_sort( arr, maximum=-1 ):
     size = len(arr)
     output = [0] * size
     count = [0] * 10
-    for i in range(0, size):
+    for i in range(size):
         count[arr[i]] += 1
     for i in range(1, 10):
         count[i] += count[i - 1]
@@ -41,7 +41,7 @@ def count_sort( arr, maximum=-1 ):
         arr[i] = output[i]
     return arr
 
-data = [4, 2, 2, 8, 3, 3, 1]
+data = [4, 2, 2, 8, 3, 3, 1, 0]
 count_sort(data)
 print("Sorted Array in Ascending Order: ")
 print(data)
